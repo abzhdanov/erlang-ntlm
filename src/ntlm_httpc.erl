@@ -15,6 +15,7 @@ request(Method, Request, Credentials) ->
                 ["Basic"|_] -> request_basic(Method, Request2, Credentials);
                 ["NTLM"] -> request_ntlm(Method, Request2, Credentials);
                 ["Negotiate"] -> request_ntlm(Method, Request2, Credentials);
+                
                 undefined -> Response
             end;
         OtherResponse -> OtherResponse
